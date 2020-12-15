@@ -1,16 +1,17 @@
-require('dotenv').config({path: 'variables.env'})
+require('dotenv').config({ path: 'variables.env' })
 const createServer = require('./createServer')
-const db = require('./db');
+const db = require('./db')
 
-const server = createServer();
+const server = createServer()
 
-
-server.start({
+server.start(
+  {
     cors: {
-        credentials: true,
-        origin: process.env.FRONTEND_URL
+      credentials: true,
+      origin: process.env.FRONTEND_URL,
     },
-}, deets => {
+  },
+  deets => {
     console.log(`Server is now running on port http://localhost:${deets.port}`)
-}
-);
+  }
+)
