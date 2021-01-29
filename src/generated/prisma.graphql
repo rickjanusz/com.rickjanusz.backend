@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/rick-janusz/dev/dev
-# timestamp: Fri Jan 29 2021 10:43:34 GMT-0600 (Central Standard Time)
+# timestamp: Fri Jan 29 2021 14:47:02 GMT-0600 (Central Standard Time)
 
 type AggregateItem {
   count: Int!
@@ -23,9 +23,9 @@ type Item implements Node {
   image: String
   largeImage: String
   price: Int!
+  user: User!
   createdAt: DateTime!
   updatedAt: DateTime!
-  user: User!
 }
 
 """A connection to a list of items."""
